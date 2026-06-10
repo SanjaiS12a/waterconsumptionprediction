@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+gru_tuning_dir/
+kt_tuning_dir/
+mlp_tuning_dir/
+outputs/
+*.pkl
