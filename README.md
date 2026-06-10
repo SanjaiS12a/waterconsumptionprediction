@@ -2,7 +2,7 @@
 
 An interactive machine learning and deep learning framework to forecast daily water demand using Multi-Layer Perceptrons (MLP), Gated Recurrent Units (GRU), and Long Short-Term Memory (LSTM) networks. 
 
-This repository features a synthetic data generator, hyperparameter-tuned deep learning models, and a premium Streamlit-based comparison dashboard called **Water Demand Showdown**.
+This repository features hyperparameter-tuned deep learning models, and a premium Streamlit-based comparison dashboard called **Water Demand Showdown**.
 
 ---
 
@@ -10,7 +10,6 @@ This repository features a synthetic data generator, hyperparameter-tuned deep l
 
 * **Three-Model Showdown:** Compare the predictions of **MLP**, **GRU**, and **LSTM** models side-by-side.
 * **Interactive Scenario Planning:** Simulate weather patterns, population changes, reservoir levels, holiday spikes, and pump outages to see how demand changes.
-* **Data-driven Generation:** Built-in data synthesis engine that models seasonality, weekly cycles, extreme weather (droughts/heatwaves), and population trends.
 * **Robust Safety Checks:** Built-in validation rules (e.g., "Ghost Town Sanity Rule" that forces logical zero demand if population or household counts drop to zero).
 * **Consensus & Spread Analytics:** Computes the average forecast, model consensus band, and the variance (spread) between models.
 
@@ -22,7 +21,6 @@ This repository features a synthetic data generator, hyperparameter-tuned deep l
 ├── .gitignore                    # Git ignore rules (excludes venv, cache, tuning logs)
 ├── README.md                     # Project documentation (this file)
 ├── app.py                        # Streamlit dashboard interface & interactive forecasting
-├── data.py                       # Synthetic data generator script
 ├── water_consumption_dataset.csv # The generated 6-year water consumption dataset
 │
 ├── MLP.ipynb                     # MLP model training and evaluation
@@ -81,13 +79,7 @@ Install the required libraries:
 pip install streamlit pandas numpy tensorflow keras scikit-learn
 ```
 
-### 3. Generate the Dataset (Optional)
-If you want to regenerate the synthetic dataset, run:
-```bash
-python data.py
-```
-
-### 4. Run the Streamlit Dashboard
+### 3. Run the Streamlit Dashboard
 Launch the interactive web application:
 ```bash
 streamlit run app.py
